@@ -1,6 +1,6 @@
 @import '../../../style.scss';
 
-.setting {
+.account {
     padding: 10px 30px 60px;
 
     .content {
@@ -26,7 +26,7 @@
                 align-items: center;
                 justify-content: center;
                 padding: 30px;
-                gap: 30px;
+                gap: 10px;
 
                 img {
                     width: 140px;
@@ -49,6 +49,16 @@
                     }
                 }
 
+                span {
+                    font-size: 22px;
+                    font-weight: 700;
+
+                    @include mobile {
+                        font-size: 20px;
+                    }
+
+                }
+
                 input {
                     display: none;
                 }
@@ -57,12 +67,19 @@
                     font-size: 18px;
                     font-weight: 600;
                     padding: 10px 35px;
+                    border: 1px solid #41f058;
+                    margin-top: 10px;
 
                     @include mobile {
                         font-size: 16px;
                         padding: 7px 25px;
                         font-weight: 500;
                     }
+                    @include tablet {
+                        font-size: 16px;
+                        padding: 7px 25px;
+                    }
+
 
                     &:active {
                         transform: scale(1.04);
@@ -77,12 +94,14 @@
         }
 
         .right {
+            width: 100%;
             display: flex;
             flex-direction: column;
             flex: 2;
             gap: 30px;
 
             .content-1 {
+                width: 100%;
                 display: flex;
                 flex-direction: column;
                 padding: 20px 30px 30px;
@@ -90,6 +109,7 @@
                 h3 {
                     font-size: 20px;
                     color: #027a44;
+                    font-weight: 600;
                     margin-left: -13px;
                 }
 
@@ -108,10 +128,11 @@
                         height: 75px;
                         gap: 5px;
                         padding: 0;
+                        width: 100%;
 
                         @include mobile {
-                            width: 100%;
                             flex: none;
+                            width: 100%;
                         }
 
                         span {
@@ -125,6 +146,7 @@
                         }
 
                         input {
+                            width: 100%;
                             padding: 10px;
                             font-size: 16px;
                             font-weight: 600;
@@ -134,7 +156,7 @@
                             }
 
                             &::placeholder {
-                                color: #000;
+                                color: #000000;
                                 font-weight: 500;
                             }
                         }
@@ -142,12 +164,11 @@
                 }
 
                 button {
-                    font-size: 16px;
                     font-weight: 600;
                     width: 30%;
                     padding: 7px;
-                    margin-left: -13px;
                     margin-top: 20px;
+                    margin-left: -13px;
 
                     @include mobile {
                         margin-top: 10px;

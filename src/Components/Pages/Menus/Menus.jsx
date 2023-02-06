@@ -1,17 +1,26 @@
 import React from 'react';
 import './Menus.scss';
 import { DataGrid, GridToolbar } from '@mui/x-data-grid';
-import { Paper } from '@mui/material';
-import { mockDataContacts } from '../../Data/mockData';
+import { Accordion, AccordionDetails, AccordionSummary, Paper } from '@mui/material';
+import { mockDataMenus } from '../../Data/mockData';
+import { MdExpandMore, MdOutlineAccessTimeFilled } from 'react-icons/md';
+import { SiAirtable } from 'react-icons/si';
+import { FaUser } from 'react-icons/fa';
+import { GiMeal } from 'react-icons/gi';
+import { RiMoneyDollarCircleFill } from 'react-icons/ri';
 
 const Menus = () => {
     const columns = [
-        { field: "id", headerName: "ID" },
-        { field: 'name', headerName: 'Name', flex: 1 },
-        { field: 'age', headerName: 'Age', type: 'number', headerAlign: 'left', align: 'left' },
-        { field: 'phone', headerName: 'Phone Number', flex: 1 },
-        { field: 'email', headerName: 'Email', flex: 1 },
-        { field: "address", headerName: "Address", flex: 1, },
+        { field: 'meal', headerName: 'Meal', flex: 1, renderCell: ({row:{imgUrl, meal}})=>{
+            return (
+                <div className='meal'>
+                    <img src={imgUrl} alt="" />
+                    <span>{meal}</span>
+                </div>
+            )
+        } },
+        { field: 'time', headerName: 'Prep. Time', flex: 1 },
+        { field: 'price', headerName: 'Price', flex: 1 },
     ]
 
     return (
@@ -21,11 +30,28 @@ const Menus = () => {
             </div>
             <Paper elevation={3} className='grid-content'>
                 <DataGrid
-                    rows={mockDataContacts}
+                    rows={mockDataMenus}
                     columns={columns}
-                    components={{Toolbar: GridToolbar}}
+                    components={{ Toolbar: GridToolbar }}
                 />
             </Paper>
+            {/* for mobile */}
+            <div className="mobile-menu">
+                <ul className='heading'>
+                    <li>Meal</li>
+                    <li>Time</li>
+                    <li>Price</li>
+                </ul>
+                <div className='header'>
+                {mockDataMenus.map((item) => (
+                        <ul>
+                            <li><img src={item.imgUrl} alt="" /><span >{item.meal}</span></li>
+                            <li><MdOutlineAccessTimeFilled /><span>{item.time}</span></li>
+                            <li><RiMoneyDollarCircleFill /><span>{item.price}</span></li>
+                        </ul>
+                ))}
+                </div>
+            </div>
         </div>
     );
 };

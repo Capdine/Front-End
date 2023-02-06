@@ -1,0 +1,11 @@
+@import '../../../style.scss';
+
+.line-graph {
+    height: 65vh;
+
+    @include mobile {}
+
+    @include tablet {
+        height: 30vh;
+    }
+}

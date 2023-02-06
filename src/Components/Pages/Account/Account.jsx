@@ -1,5 +1,5 @@
 import React from 'react';
-import './Settings.scss';
+import './Account.scss';
 import { RiUpload2Fill } from 'react-icons/ri';
 import { Paper, TextField } from '@mui/material';
 import LinearProgress from '@mui/material/LinearProgress';
@@ -7,56 +7,55 @@ import { Formik } from 'formik';
 import * as yup from "yup";
 
 const initialValues = {
-    name: '',
-    location: '',
-    type: '',
-    phone: ''
+    username: '',
+    email: '',
+    firstname: '',
+    lastname: ''
 }
 const initialValues2 = {
-    email: '',
-    position: '',
-    access: ''
+    address: '',
+    city: '',
+    country: ''
 }
 
 const phoneRegExp = /^((\+[1-9]{1,4}[ -]?)|(\([0-9]{2,3}\)[ -]?)|([0-9]{2,4})[ -]?)*?[0-9]{3,4}[ -]?[0-9]{3,4}$/;
 
-const restaurantSchema = yup.object().shape({
-    name: yup.string().required("Name is required"),
-    location: yup.string().required("Location is required"),
-    type: yup.string().required("Food type is required"),
-    phone: yup.string().matches(phoneRegExp, "Phone number is not valid").required("Contact number is required")
-})
-const staffSchema = yup.object().shape({
+const userSchema = yup.object().shape({
+    username: yup.string().required("Username is required"),
     email: yup.string().required("Email is required"),
-    position: yup.string().required("Position is required"),
-    access: yup.string().required("Access type is required")
+    firstname: yup.string().required("First Name is required"),
+    lastname: yup.string().required("Last Name is required")
+})
+const contactSchema = yup.object().shape({
+    address: yup.string().required("Address is required"),
+    city: yup.string().required("City is required"),
+    country: yup.string().required("Country is required")
 })
 
-const Settings = () => {
+const Account = () => {
 
     const handleSubmit = () => {
         console.log(value)
     }
     return (
-        <section className='setting'>
+        <section className='account'>
             <div className="title">
-                <h1>Settings</h1>
+                <h1>Account</h1>
             </div>
             <div className="content">
                 <Paper elevation={3} className="left">
                     <div className="img-upload">
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTDMsIQjVDI_yrFB4vUjX15TdFRan7SOUFyEg&usqp=CAU" alt="" />
-
+                        <img src="https://i.pinimg.com/236x/28/9f/d8/289fd81eff482949df60680cdb03c7a4.jpg" alt="" />
+                        <span>Samantha Moon</span>
                         <input type="file" name="file" id="file" />
-                        <label htmlFor='file' className='upload brand-btn' >Resaurant Logo<RiUpload2Fill /></label>
-                        <LinearProgress value={50} />
+                        <label htmlFor='file' className='upload brand-btn' >Profile Photo<RiUpload2Fill /></label>
                     </div>
                 </Paper>
                 <div className="right">
                     <Formik
                         onSubmit={handleSubmit}
                         initialValues={initialValues}
-                        validationSchema={restaurantSchema}
+                        validationSchema={userSchema}
                     >
                         {({
                             values,
@@ -68,90 +67,26 @@ const Settings = () => {
                         }) => (
                             <form onSubmit={handleSubmit}>
                                 <Paper elevation={3} className="content-1">
-                                    <h3>Restaurant Settings</h3>
+                                    <h3>User Settings</h3>
                                     <div className="row">
                                         <div className="item">
-                                            <span>Full Name</span>
+                                            <span>Username</span>
                                             <TextField
                                                 type="text"
-                                                placeholder='Rastaurant Name'
-                                                name='name'
-                                                value={values.name}
+                                                placeholder='userame123'
+                                                name='username'
+                                                value={values.username}
                                                 onBlur={handleBlur}
                                                 onChange={handleChange}
-                                                error={!!touched.name && !!errors.name}
-                                                helperText={touched.name && errors.name}
+                                                error={!!touched.username && !!errors.username}
+                                                helperText={touched.username && errors.username}
                                             />
                                         </div>
                                         <div className="item">
-                                            <span>Location</span>
+                                            <span>Email</span>
                                             <TextField
-                                                type="text"
-                                                placeholder='Address'
-                                                name='location'
-                                                value={values.location}
-                                                onBlur={handleBlur}
-                                                onChange={handleChange}
-                                                error={!!touched.location && !!errors.location}
-                                                helperText={touched.location && errors.location}
-                                            />
-                                        </div>
-                                    </div>
-                                    <div className="row">
-                                        <div className="item">
-                                            <span>Food Type</span>
-                                            <TextField
-                                                type="text"
-                                                placeholder='Pizza, Burger'
-                                                name='type'
-                                                value={values.type}
-                                                onBlur={handleBlur}
-                                                onChange={handleChange}
-                                                error={!!touched.type && !!errors.type}
-                                                helperText={touched.type && errors.type}
-                                            />
-                                        </div>
-                                        <div className="item">
-                                            <span>Phone Number</span>
-                                            <TextField
-                                                type="text"
-                                                placeholder='Contact Number'
-                                                name='phone'
-                                                value={values.phone}
-                                                onBlur={handleBlur}
-                                                onChange={handleChange}
-                                                error={!!touched.phone && !!errors.phone}
-                                                helperText={touched.phone && errors.phone}
-                                            />
-                                        </div>
-                                    </div>
-                                    <button className='brand-btn'>Save</button>
-                                </Paper>
-                            </form>
-                        )}
-                    </Formik>
-                    <Formik
-                        onSubmit={handleSubmit}
-                        initialValues={initialValues2}
-                        validationSchema={staffSchema}
-                    >
-                        {({
-                            values,
-                            errors,
-                            touched,
-                            handleBlur,
-                            handleChange,
-                            handleSubmit,
-                        }) => (
-                            <form onSubmit={handleSubmit}>
-                                <Paper elevation={3} className="content-1">
-                                    <h3>Staff</h3>
-                                    <div className="row">
-                                        <div className="item" style={{ width: '100%' }}>
-                                            <span>Email Address</span>
-                                            <TextField
-                                                type="text"
-                                                placeholder='user@example.com'
+                                                type="email"
+                                                placeholder='Email Address'
                                                 name='email'
                                                 value={values.email}
                                                 onBlur={handleBlur}
@@ -163,29 +98,93 @@ const Settings = () => {
                                     </div>
                                     <div className="row">
                                         <div className="item">
-                                            <span>Role</span>
+                                            <span>First Name</span>
                                             <TextField
                                                 type="text"
-                                                placeholder='Position'
-                                                name='position'
-                                                value={values.position}
+                                                placeholder='John'
+                                                name='firstname'
+                                                value={values.firstname}
                                                 onBlur={handleBlur}
                                                 onChange={handleChange}
-                                                error={!!touched.position && !!errors.position}
-                                                helperText={touched.position && errors.position}
+                                                error={!!touched.firstname && !!errors.firstname}
+                                                helperText={touched.firstname && errors.firstname}
                                             />
                                         </div>
                                         <div className="item">
-                                            <span>Access</span>
+                                            <span>Last Name</span>
                                             <TextField
                                                 type="text"
-                                                placeholder='Orders. Menus, Settings..'
-                                                name='access'
-                                                value={values.access}
+                                                placeholder='Doe'
+                                                name='lastname'
+                                                value={values.lastname}
                                                 onBlur={handleBlur}
                                                 onChange={handleChange}
-                                                error={!!touched.access && !!errors.access}
-                                                helperText={touched.access && errors.access}
+                                                error={!!touched.lastname && !!errors.lastname}
+                                                helperText={touched.lastname && errors.lastname}
+                                            />
+                                        </div>
+                                    </div>
+                                    <button className='brand-btn'>Save</button>
+                                </Paper>
+                            </form>
+                        )}
+                    </Formik>
+                    <Formik
+                        onSubmit={handleSubmit}
+                        initialValues={initialValues2}
+                        validationSchema={contactSchema}
+                    >
+                        {({
+                            values,
+                            errors,
+                            touched,
+                            handleBlur,
+                            handleChange,
+                            handleSubmit,
+                        }) => (
+                            <form onSubmit={handleSubmit}>
+                                <Paper elevation={3} className="content-1">
+                                    <h3>Contact Settings</h3>
+                                    <div className="row">
+                                        <div className="item" style={{ width: '100%' }}>
+                                            <span>Address</span>
+                                            <TextField
+                                                type="text"
+                                                placeholder='Sunset Blvd, 38'
+                                                name='address'
+                                                value={values.address}
+                                                onBlur={handleBlur}
+                                                onChange={handleChange}
+                                                error={!!touched.address && !!errors.address}
+                                                helperText={touched.address && errors.address}
+                                            />
+                                        </div>
+                                    </div>
+                                    <div className="row">
+                                        <div className="item">
+                                            <span>City</span>
+                                            <TextField
+                                                type="text"
+                                                placeholder='Los Angeles'
+                                                name='city'
+                                                value={values.city}
+                                                onBlur={handleBlur}
+                                                onChange={handleChange}
+                                                error={!!touched.city && !!errors.city}
+                                                helperText={touched.city && errors.city}
+                                            />
+                                        </div>
+                                        <div className="item">
+                                            <span>Country</span>
+                                            <TextField
+                                                type="text"
+                                                placeholder='USA'
+                                                name='country'
+                                                value={values.country}
+                                                onBlur={handleBlur}
+                                                onChange={handleChange}
+                                                error={!!touched.country && !!errors.country}
+                                                helperText={touched.country && errors.country}
                                             />
                                         </div>
                                     </div>
@@ -200,4 +199,4 @@ const Settings = () => {
     );
 };
 
-export default Settings;
+export default Account;

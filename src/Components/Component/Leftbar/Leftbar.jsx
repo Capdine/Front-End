@@ -1,13 +1,15 @@
 import React, { useState } from 'react';
 import './Leftbar.scss';
-import { Sidebar, Menu, MenuItem, useProSidebar } from 'react-pro-sidebar';
+import { Sidebar, Menu, MenuItem, useProSidebar, SubMenu } from 'react-pro-sidebar';
 import { Link } from 'react-router-dom';
 import { Box } from '@mui/material';
 import { FiHome } from 'react-icons/fi';
+import {  AiOutlinePieChart } from 'react-icons/ai';
+import { FaQuestion, FaChartArea } from 'react-icons/fa';
 import { ImMenu } from 'react-icons/im';
-import { MdRestaurantMenu, MdSettings, MdOutlineAccountCircle } from 'react-icons/md';
-import { BiMoney } from 'react-icons/bi';
-import logo from '../../images/CAPDINE-logo-BLACK 01.png';
+import { MdRestaurantMenu, MdSettings, MdOutlineAccountCircle, MdOutlinePayment } from 'react-icons/md';
+import { BiMoney, BiLineChart } from 'react-icons/bi';
+import logo from '../../images/CAPDINE-logo-WHITE 01.png';
 
 
 
@@ -30,7 +32,6 @@ const Leftbar = () => {
     };
 
     return (
-
         <Sidebar className='sidebar' collapsed={isCollapsed}>
             <Menu className='menu'>
                 {/* LOGO */}
@@ -81,14 +82,6 @@ const Leftbar = () => {
                             setSelected={setSelected}
                         ></Item>
                     </Link>
-                    <Link to='/settings'>
-                        <Item
-                            title='Settings'
-                            icon={<MdSettings />}
-                            selected={selected}
-                            setSelected={setSelected}
-                        ></Item>
-                    </Link>
                     <Link to='/account'>
                         <Item
                             title='Account'
@@ -97,23 +90,52 @@ const Leftbar = () => {
                             setSelected={setSelected}
                         ></Item>
                     </Link>
+                    <Link to='/settings'>
+                        <Item
+                            title='Settings'
+                            icon={<MdSettings />}
+                            selected={selected}
+                            setSelected={setSelected}
+                        ></Item>
+                    </Link>
+                    <SubMenu label="Charts" icon={<BiLineChart />}>
+                        <Link to='/pieGraph'>
+                            <Item
+                                title='Pie Chart'
+                                icon={<AiOutlinePieChart />}
+                                selected={selected}
+                                setSelected={setSelected}
+                            ></Item>
+                        </Link>
+                        <Link to='/lineGraph'>
+                            <Item
+                                title='Line Chart'
+                                icon={<FaChartArea />}
+                                selected={selected}
+                                setSelected={setSelected}
+                            ></Item>
+                        </Link>
+                    </SubMenu>
                     <Link to='/payment'>
                         <Item
                             title='Payment'
-                            icon={<FiHome />}
+                            icon={<MdOutlinePayment />}
+                            selected={selected}
+                            setSelected={setSelected}
+                        ></Item>
+                    </Link>
+                    <Link to='/FAQ'>
+                        <Item
+                            title='FAQ'
+                            icon={<FaQuestion />}
                             selected={selected}
                             setSelected={setSelected}
                         ></Item>
                     </Link>
                 </Box>
-                {/* </MenuItem> */}
-                {/* <MenuItem component={<Link to="/documentation" />}> Documentation</MenuItem>
-                    <MenuItem component={<Link to="/calendar" />}> Calendar</MenuItem>
-                    <MenuItem component={<Link to="/e-commerce" />}> E-commerce</MenuItem> */}
-
             </Menu>
         </Sidebar>
-        
+
     );
 };
 
