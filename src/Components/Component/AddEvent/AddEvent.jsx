@@ -64,9 +64,7 @@ const AddEvent = ({ open, handleClose }) => {
                                     handleSubmit,
                                 }) => (
                                     <form onSubmit={handleSubmit}>
-
                                         <div className="row">
-
                                             <div className="item">
                                                 <LocalizationProvider dateAdapter={AdapterDayjs}>
                                                     <DateTimePicker
@@ -92,7 +90,6 @@ const AddEvent = ({ open, handleClose }) => {
                                             </div>
                                             <button className='event-btn brand-btn'>Save</button>
                                         </div>
-
                                     </form>
                                 )}
                             </Formik>

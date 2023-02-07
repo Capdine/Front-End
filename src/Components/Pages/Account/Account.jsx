@@ -2,7 +2,6 @@ import React from 'react';
 import './Account.scss';
 import { RiUpload2Fill } from 'react-icons/ri';
 import { Paper, TextField } from '@mui/material';
-import LinearProgress from '@mui/material/LinearProgress';
 import { Formik } from 'formik';
 import * as yup from "yup";
 
@@ -17,8 +16,6 @@ const initialValues2 = {
     city: '',
     country: ''
 }
-
-const phoneRegExp = /^((\+[1-9]{1,4}[ -]?)|(\([0-9]{2,3}\)[ -]?)|([0-9]{2,4})[ -]?)*?[0-9]{3,4}[ -]?[0-9]{3,4}$/;
 
 const userSchema = yup.object().shape({
     username: yup.string().required("Username is required"),
