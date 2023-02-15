@@ -55,7 +55,7 @@
         .linchart {
             flex: 6;
             height: 380px;
-            background: rgba(210, 251, 164, 0.8);
+            background: #fcfcfc;
 
             @include mobile {
                 display: none;
@@ -121,7 +121,7 @@
         .piechart {
             flex: 4;
             height: 380px;
-            background: rgba(210, 251, 164, 0.8);
+            background: #fcfcfc;
 
             .header {
                 padding: 20px 20px 0;

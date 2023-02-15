@@ -384,6 +384,45 @@ export const mockDataOrder = [
   },
 ];
 
+export const newOrder = [
+  {
+    id: 1,
+    name: 'Pizza',
+    quantity: 2,
+    imgUrl: 'https://images.pexels.com/photos/2619970/pexels-photo-2619970.jpeg?auto=compress&cs=tinysrgb&w=600',
+  },
+  {
+    id: 2,
+    name: 'Fries',
+    quantity: 2,
+    imgUrl: 'https://images.pexels.com/photos/1893556/pexels-photo-1893556.jpeg?auto=compress&cs=tinysrgb&w=600',
+  },
+  {
+    id: 3,
+    name: 'Burger',
+    quantity: 2,
+    imgUrl: 'https://images.pexels.com/photos/1639557/pexels-photo-1639557.jpeg?auto=compress&cs=tinysrgb&w=600',
+  },
+  {
+    id: 5,
+    name: 'Sandwich',
+    quantity: 2,
+    imgUrl: 'https://images.pexels.com/photos/1603898/pexels-photo-1603898.jpeg?auto=compress&cs=tinysrgb&w=600',
+  },
+  {
+    id: 6,
+    name: 'Sandwich',
+    quantity: 2,
+    imgUrl: 'https://images.pexels.com/photos/1603898/pexels-photo-1603898.jpeg?auto=compress&cs=tinysrgb&w=600',
+  },
+  {
+    id: 7,
+    name: 'Sandwich',
+    quantity: 2,
+    imgUrl: 'https://images.pexels.com/photos/1603898/pexels-photo-1603898.jpeg?auto=compress&cs=tinysrgb&w=600',
+  },
+]
+
 export const mockDataPartnersMenus = [
   {
     id: '1',

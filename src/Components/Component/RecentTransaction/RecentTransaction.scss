@@ -32,7 +32,7 @@
     }
 
     .history {
-        height: 330px;
+        height: 310px;
         display: flex;
         flex-direction: column;
         gap: 7px;
@@ -47,7 +47,7 @@
             gap: 7px;
         }
 
-        &::-webkit-scrollbar-track {
+        &::-webkit-scrollbar {
             display: none;
         }
 
@@ -56,7 +56,7 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
-            background: rgba(210, 251, 164, 0.8);
+            background: rgba(210, 251, 164, 0.6);
             border-radius: 5px;
             -webkit-border-radius: 5px;
             -moz-border-radius: 5px;
