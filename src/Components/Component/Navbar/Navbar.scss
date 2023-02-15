@@ -4,14 +4,13 @@
     height: 70px;
     width: 100%;
     padding: 0 30px 0 20px;
-    background: rgba(126, 184, 116, 0.5);
+    background: rgba(210, 251, 164, 0.6);
     display: flex;
     align-items: center;
     justify-content: space-between;
 
     @include mobile {
         padding: 0 10px;
-
     }
 
     .search {
@@ -197,19 +196,23 @@
     flex-direction: column;
     align-items: center;
     display: none;
-    background: #fff2cd;
+    background: #01522d;
+    height: 100vh;
+    overflow: scroll;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
 
     @include mobile {
         display: flex;
     }
-
 
     .offcanvas-header {
         width: 100%;
         position: relative;
         display: flex;
         justify-content: center;
-        background: rgba(210, 251, 164, 0.6);
         padding: 10px 0;
 
         .btn-close {
@@ -237,7 +240,7 @@
             span {
                 font-size: 26px;
                 font-weight: 700;
-                color: #01522d;
+                color: #fff;
             }
         }
     }
@@ -245,6 +248,7 @@
     .content {
         width: 100%;
         padding: 0;
+        display: block;
 
         .menus {
             width: 100%;
@@ -269,16 +273,16 @@
 
                     li {
                         width: 100%;
-                        font-size: 24px;
+                        font-size: 20px;
                         font-weight: 600;
-                        color: #000;
+                        color: #fcfcfc;
                         cursor: pointer;
                         padding: 10px 0;
                         text-align: center;
 
                         &:hover {
                             color: #01522d;
-                            background: #fce7ae;
+                            background: rgba(210, 251, 164, 0.6);
                         }
 
                         transition: all ease 0.3s;
@@ -292,23 +296,24 @@
             }
 
             button {
-                width: 200px;
-                font-size: 24px;
-                font-weight: 600;
-                border: none;
+                width: 40%;
+                font-size: 20px;
                 padding: 7px 50px;
-                border-radius: 3px;
-                -webkit-border-radius: 3px;
-                -moz-border-radius: 3px;
-                -ms-border-radius: 3px;
-                -o-border-radius: 3px;
-                background: #01522d;
-                color: #fff;
+                border: none;
+                border-radius: 5px;
+                -webkit-border-radius: 5px;
+                -moz-border-radius: 5px;
+                -ms-border-radius: 5px;
+                -o-border-radius: 5px;
+                transition: all ease 0.3s;
+                -webkit-transition: all ease 0.3s;
+                -moz-transition: all ease 0.3s;
+                -ms-transition: all ease 0.3s;
+                -o-transition: all ease 0.3s;
 
                 &:hover {
-                    background: #067945;
+                    background: #000;
                     color: #fff;
-
                 }
             }
         }

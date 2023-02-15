@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
 import { Paper } from '@mui/material';
+import React, { useState } from 'react';
 import './Todo.scss';
 import { MdOutlineAddCircleOutline } from 'react-icons/md';
 import AddEvent from '../AddEvent/AddEvent';
@@ -11,7 +11,7 @@ const Todo = () => {
 
     return (
         <>
-            <Paper elevation={3} className='todo'>
+            <Paper elevation={3} className="todos">
                 <div className="header">
                     <div>
                         <h4>Todo List</h4>
@@ -31,11 +31,50 @@ const Todo = () => {
                         <span>Dinner meeting</span>
                         <small>10:30 AM</small>
                     </div>
+                    <div className="item">
+                        <span>Dinner meeting</span>
+                        <small>10:30 AM</small>
+                    </div>
+                    <div className="item">
+                        <span>Dinner meeting</span>
+                        <small>10:30 AM</small>
+                    </div>
+                    <div className="item">
+                        <span>Dinner meeting</span>
+                        <small>10:30 AM</small>
+                    </div>
+                    <div className="item">
+                        <span>Dinner meeting</span>
+                        <small>10:30 AM</small>
+                    </div>
+                    <div className="item">
+                        <span>Dinner meeting</span>
+                        <small>10:30 AM</small>
+                    </div>
+                    <div className="item">
+                        <span>Dinner meeting</span>
+                        <small>10:30 AM</small>
+                    </div>
+                    <div className="item">
+                        <span>Dinner meeting</span>
+                        <small>10:30 AM</small>
+                    </div>
                 </div>
+                <AddEvent open={open} handleClose={handleClose} />
             </Paper>
-            <AddEvent open={open} handleClose={handleClose}/>
         </>
     );
 };
 
 export default Todo;
+{/* <Paper elevation={3} className='todos'>
+                <div className="header">
+                    <div>
+                        <h4>Todo List</h4>
+                    </div>
+                    <span onClick={handleOpen}>Add Event<MdOutlineAddCircleOutline /></span>
+                </div>
+                <div className="history">
+
+                </div>
+            </Paper> */}

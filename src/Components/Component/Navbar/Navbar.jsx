@@ -8,7 +8,7 @@ import { MdNotifications } from 'react-icons/md';
 import { Popover } from '@mui/material';
 import { Link } from 'react-router-dom';
 import logo from '../../images/CAPDINE-logo-BLACK 01.png';
-import { Offcanvas, Stack } from 'react-bootstrap';
+import { Offcanvas } from 'react-bootstrap';
 
 const Navbar = () => {
     const [anchorEl, setAnchorEl] = useState(null);
@@ -103,7 +103,7 @@ const Navbar = () => {
                     <div className='option mo-option'>
                         <ImMenu className='icon' onClick={openOffcanvas} />
                     </div>
-                    <Link to='account'>
+                    <Link to='/settings'>
                         <div className="user">
                             <span>Samantha Moon</span>
                             <img src="https://i.pinimg.com/236x/28/9f/d8/289fd81eff482949df60680cdb03c7a4.jpg" alt="" />
@@ -120,7 +120,7 @@ const Navbar = () => {
                 </Offcanvas.Header>
                 <Offcanvas.Body className='content'>
                     <div className="menus">
-                        <ul>
+                        <ul onClick={closeOffcanvas}>
                             <Link to='/' className='menu'><li>Dashboard</li></Link>
                             <Link to='/orders' className='menu'><li>Orders</li></Link>
                             <Link to='/menus' className='menu'><li>Menus</li></Link>
@@ -128,7 +128,6 @@ const Navbar = () => {
                             <Link to='/settings' className='menu'><li>Settings</li></Link>
                             <Link to='/payment' className='menu'><li>Payment</li></Link>
                             <Link to='/FAQ' className='menu'><li>FAQ</li></Link>
-
                         </ul>
                         <button>Logout</button>
                     </div>

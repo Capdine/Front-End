@@ -1,14 +1,14 @@
 import React from 'react';
 import './Dashboard.scss';
 import { MdFileDownload, MdOutlineAttachMoney, MdPendingActions } from 'react-icons/md';
-import { BsCalendar2WeekFill, BsCurrencyDollar } from 'react-icons/bs';
 import { FaTasks } from 'react-icons/fa';
-import StatBox from '../../Component/StatBox/StatBox';
 import { Paper } from '@mui/material';
 import LineChart from '../../Component/LineChart/LineChart';
-import { mockTransactions } from '../../Data/mockData';
 import PieChart from '../../Component/PieChart/PieChart';
 import Todo from '../../Component/Todo/Todo';
+import RecentTransaction from '../../Component/RecentTransaction/RecentTransaction';
+import Status from '../../Component/Status/Status';
+import CurrentOrders from '../../Component/CurrentOrders/CurrentOrders';
 
 const Dashboard = () => {
     return (
@@ -19,37 +19,14 @@ const Dashboard = () => {
                 </div>
                 <button className='brand-btn'><MdFileDownload /> DOWNLOAD REPORT</button>
             </div>
-            <div className="stat-content">
-                <div className="stat-items">
-                    <StatBox
-                        className='stat'
-                        title='EARNINGS (MONTHLY)'
-                        subtitle='4,000'
-                        icon={<BsCalendar2WeekFill />}
-                    />
-                    <StatBox
-                        className='stat'
-                        title='EARNINGS (ANNUAL)'
-                        subtitle='15,000'
-                        icon={<BsCurrencyDollar />}
-                    />
-                </div>
-                <div className="stat-items">
-                    <StatBox
-                        className='stat'
-                        title='TASKS'
-                        percent='45%'
-                        progress='0.45'
-                    />
-                    <StatBox
-                        className='stat'
-                        title='PENDING REQUESTS'
-                        request='17'
-                        icon={<MdPendingActions />}
-                    />
-                </div>
+            <Status />
+            <div className="row1">
+
+                <CurrentOrders />
+                <RecentTransaction />
+
             </div>
-            <div className="row">
+            <div className="row2">
                 <Paper elevation={3} className="linchart">
                     <div className="header">
                         <div>
@@ -76,29 +53,10 @@ const Dashboard = () => {
                     </div>
                 </Paper>
             </div>
-            <div className="row2">
+            <div className="row1">
 
                 <Todo />
-
-                <Paper elevation={3} className="recent">
-                    <div className="header">
-                        <div>
-                            <h4>Recent Transaction</h4>
-                        </div>
-                    </div>
-                    <div className="history">
-                        {mockTransactions.map((item, i) => (
-                            <div className="item" key={i}>
-                                <div className="user">
-                                    <h4>ID: {item.txId}</h4>
-                                    <span>{item.user}</span>
-                                </div>
-                                <small>{item.date}</small>
-                                <div className='cost'><span>${item.cost}</span></div>
-                            </div>
-                        ))}
-                    </div>
-                </Paper>
+                {/* <RecentTransaction /> */}
 
             </div>
         </section>

@@ -1,7 +1,7 @@
 @import '../../../style.scss';
 
 .account {
-    padding: 10px 30px 60px;
+    padding: 20px;
 
     .content {
         display: flex;
@@ -27,6 +27,35 @@
                 justify-content: center;
                 padding: 30px;
                 gap: 10px;
+
+                .profile-pic {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 140px;
+                    height: 140px;
+                    font-size: 50px;
+                    border-radius: 50%;
+                    -webkit-border-radius: 50%;
+                    -moz-border-radius: 50%;
+                    -ms-border-radius: 50%;
+                    -o-border-radius: 50%;
+                    background: rgba(210, 251, 164, 0.6);
+                    border: 5px solid #d3d3d3;
+                    color: #353535;
+
+                    @include mobile {
+                        width: 120px;
+                        height: 120px;
+                        font-size: 40px;
+                    }
+
+                    @include tablet {
+                        width: 120px;
+                        height: 120px;
+                        font-size: 40px;
+                    }
+                }
 
                 img {
                     width: 140px;
@@ -75,6 +104,7 @@
                         padding: 7px 25px;
                         font-weight: 500;
                     }
+
                     @include tablet {
                         font-size: 16px;
                         padding: 7px 25px;
@@ -107,10 +137,9 @@
                 padding: 20px 30px 30px;
 
                 h3 {
-                    font-size: 20px;
+                    font-size: 22px;
                     color: #027a44;
                     font-weight: 600;
-                    margin-left: -13px;
                 }
 
                 .row {
@@ -168,7 +197,6 @@
                     width: 30%;
                     padding: 7px;
                     margin-top: 20px;
-                    margin-left: -13px;
 
                     @include mobile {
                         margin-top: 10px;

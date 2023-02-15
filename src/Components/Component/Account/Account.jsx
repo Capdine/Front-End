@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Account.scss';
 import { RiUpload2Fill } from 'react-icons/ri';
+import { BsPersonFill } from 'react-icons/bs';
 import { Paper, TextField } from '@mui/material';
 import { Formik } from 'formik';
 import * as yup from "yup";
@@ -30,6 +31,7 @@ const contactSchema = yup.object().shape({
 })
 
 const Account = () => {
+    const [file, setFile] = useState(null);
 
     const handleSubmit = () => {
         console.log(value)
@@ -42,9 +44,10 @@ const Account = () => {
             <div className="content">
                 <Paper elevation={3} className="left">
                     <div className="img-upload">
-                        <img src="https://i.pinimg.com/236x/28/9f/d8/289fd81eff482949df60680cdb03c7a4.jpg" alt="" />
+
+                        {file ? <img src={URL.createObjectURL(file)} alt="" /> : <div><div className='profile-pic'><BsPersonFill /></div></div>}
                         <span>Samantha Moon</span>
-                        <input type="file" name="file" id="file" />
+                        <input type="file" name="file" id="file" onChange={(e) => setFile(e.target.files[0])} />
                         <label htmlFor='file' className='upload brand-btn' >Profile Photo<RiUpload2Fill /></label>
                     </div>
                 </Paper>

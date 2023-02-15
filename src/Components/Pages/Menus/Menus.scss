@@ -1,162 +1,102 @@
 @import '../../../style.scss';
 
 .menus {
-    padding: 10px 30px 60px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
 
-    @include mobile {
-        padding: 10px 15px 60px;
+    p {
+        margin-bottom: 0;
     }
 
-    .grid-content {
-        width: 100%;
-        height: 75vh;
-
-        @include mobile {
-            display: none;
-        }
-
-        @include tablet {
-            height: 80vh;
-        }
-
-        .css-i4bv87-MuiSvgIcon-root {
-            color: #fff !important;
-        }
-
-        .meal {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-
-            img {
-                width: 30px;
-                height: 30px;
-                object-fit: cover;
-                border-radius: 50%;
-                -webkit-border-radius: 50%;
-                -moz-border-radius: 50%;
-                -ms-border-radius: 50%;
-                -o-border-radius: 50%;
-                border: 1px solid #01522d;
-            }
-        }
-    }
-
-    // mobile interface
-
-    .mobile-menu {
+    .menu-content {
+        display: flex;
         flex-direction: column;
-        display: none;
+        gap: 60px;
 
-        @include mobile {
-            display: flex;
-        }
+        .grid-content {
+            width: 100%;
+            height: 75vh;
+            margin-bottom: 40px;
 
-        .heading {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 7px 70px 7px 7px;
-            background: #01522d;
-            color: #fff;
-            border-top-right-radius: 5px;
-            border-top-left-radius: 5px;
-        }
-
-        .header {
-            background: #fff2cd;
-
-            ul {
-                width: 100%;
-                display: flex;
-                align-items: center;
-                padding: 7px;
-                gap: 15px;
-
-                li {
-                    flex: 1;
-                    display: flex;
-                    align-items: center;
-                    gap: 5px;
-                    font-size: 22px;
-                    color: #01522d;
-
-                    img {
-                        width: 30px;
-                        height: 30px;
-                        object-fit: cover;
-                        border-radius: 50%;
-                        -webkit-border-radius: 50%;
-                        -moz-border-radius: 50%;
-                        -ms-border-radius: 50%;
-                        -o-border-radius: 50%;
-                    }
-
-                    span {
-                        font-size: 20px;
-                    }
-                }
+            @include mobile {
+                display: none;
             }
-        }
 
-        .details {
-            background: rgba(210, 251, 164, 0.6);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 10px;
+            @include tablet {
+                height: 60vh;
+            }
 
-            .user {
-                font-size: 18px;
-                padding: 5px 10px;
-                color: #fff;
-                background: #01522d;
+            .menu-header {
+                background: rgba(210, 251, 164, 0.8);
+                padding: 10px;
+
+                @include tablet {
+                    padding: 15px;
+                }
+
+                h3 {
+                    font-size: 22px;
+                    font-weight: 600;
+                    margin-bottom: 0;
+                }
+
+                border-top-left-radius: 5px;
+                border-top-right-radius: 5px;
+            }
+
+            .css-i4bv87-MuiSvgIcon-root {
+                color: #fff !important;
+            }
+
+            .restaurant {
                 display: flex;
                 align-items: center;
                 gap: 10px;
-                border-radius: 3px;
-                -webkit-border-radius: 3px;
-                -moz-border-radius: 3px;
-                -ms-border-radius: 3px;
-                -o-border-radius: 3px;
+
+                img {
+                    width: 30px;
+                    height: 30px;
+                    object-fit: cover;
+                    border-radius: 50%;
+                    -webkit-border-radius: 50%;
+                    -moz-border-radius: 50%;
+                    -ms-border-radius: 50%;
+                    -o-border-radius: 50%;
+                    border: 1px solid #01522d;
+                }
             }
 
-            ul {
-                width: 100%;
+            .meal {
                 display: flex;
-                flex-direction: column;
-                gap: 1px;
+                align-items: center;
+                gap: 10px;
 
-                li {
-                    display: flex;
-                    align-items: center;
-                    justify-content: space-between;
-                    font-size: 20px;
-                    background: #fff2cd;
-                    padding: 5px 10px;
-
-                    span {
-                        display: flex;
-                        align-items: center;
-                        gap: 10px;
-                    }
+                img {
+                    width: 30px;
+                    height: 30px;
+                    object-fit: cover;
+                    border-radius: 50%;
+                    -webkit-border-radius: 50%;
+                    -moz-border-radius: 50%;
+                    -ms-border-radius: 50%;
+                    -o-border-radius: 50%;
+                    border: 1px solid #01522d;
                 }
             }
         }
     }
+
 }
 
 .css-1j9kmqg-MuiDataGrid-toolbarContainer {
     min-height: 40px !important;
     background: #01522d !important;
-    border-top-left-radius: 4px !important;
-    border-top-right-radius: 4px !important;
-
+    border: none;
 }
 
 .css-1knaqv7-MuiButtonBase-root-MuiButton-root {
     color: #fff !important;
-
 }
 
 .css-z8fhq1-MuiDataGrid-columnHeaders {
@@ -164,7 +104,6 @@
     color: #fff !important;
     border-top-left-radius: 0 !important;
     border-top-right-radius: 0 !important;
-
 }
 
 .css-ptiqhd-MuiSvgIcon-root {
@@ -182,6 +121,8 @@
     background: #013A20 !important;
     border-bottom-left-radius: 4px !important;
     border-bottom-right-radius: 4px !important;
+    display: flex;
+    align-items: center;
 
 }
 

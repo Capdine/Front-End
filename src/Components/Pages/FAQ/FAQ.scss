@@ -1,7 +1,7 @@
 @import '../../../style.scss';
 
 .faq {
-    padding: 10px 30px 60px;
+    padding: 20px;
 
     .content {
         display: flex;
@@ -40,7 +40,7 @@
 
 
         .header {
-            background: #013A20;
+            background: #01522d;
             color: #fff;
             border-bottom: 1px solid #fff;
 
@@ -61,7 +61,7 @@
         }
 
         .details {
-            background: rgba(210, 251, 164, 0.6);
+            background: rgba(210, 251, 164, 0.8);
 
             p {
                 font-size: 16px;

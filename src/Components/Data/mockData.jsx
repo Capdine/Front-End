@@ -1,94 +1,472 @@
 export const mockDataOrder = [
   {
-    id: 1,
+    id: '3c56353c',
     name: "Jon Snow",
-    meal: "Pizza, tacos, fruit",
-    table: 3,
+    meal: [
+      {
+        id: 2,
+        name: 'Fries',
+        quantity: 2,
+        imgUrl: 'https://images.pexels.com/photos/1893556/pexels-photo-1893556.jpeg?auto=compress&cs=tinysrgb&w=600',
+      },
+      {
+        id: 3,
+        name: 'Burger',
+        quantity: 2,
+        imgUrl: 'https://images.pexels.com/photos/1639557/pexels-photo-1639557.jpeg?auto=compress&cs=tinysrgb&w=600',
+      },
+      {
+        id: 4,
+        name: 'Sandwich',
+        quantity: 2,
+        imgUrl: 'https://images.pexels.com/photos/1603898/pexels-photo-1603898.jpeg?auto=compress&cs=tinysrgb&w=600',
+      },
+    ],
+    table: 'Take out',
     time: "15:22",
     price: "$132",
+    status: 'pending',
+    payment: 'Paid',
+    ordered: 'Online',
+    message: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellat harum molestiae perferendis fuga expedita repellendus',
   },
   {
-    id: 2,
+    id: 'c7465t47',
     name: "Jon Snow",
-    meal: "Pizza, fruit",
+    meal: [
+      {
+        id: 1,
+        name: 'Pizza',
+        quantity: 2,
+        imgUrl: 'https://images.pexels.com/photos/2619970/pexels-photo-2619970.jpeg?auto=compress&cs=tinysrgb&w=600',
+      },
+      {
+        id: 2,
+        name: 'Fries',
+        quantity: 2,
+        imgUrl: 'https://images.pexels.com/photos/1893556/pexels-photo-1893556.jpeg?auto=compress&cs=tinysrgb&w=600',
+      },
+      {
+        id: 3,
+        name: 'Burger',
+        quantity: 2,
+        imgUrl: 'https://images.pexels.com/photos/1639557/pexels-photo-1639557.jpeg?auto=compress&cs=tinysrgb&w=600',
+      },
+      {
+        id: 4,
+        name: 'Sandwich',
+        quantity: 2,
+        imgUrl: 'https://images.pexels.com/photos/1603898/pexels-photo-1603898.jpeg?auto=compress&cs=tinysrgb&w=600',
+      },
+    ],
     table: 5,
     time: "17:22",
     price: "$182",
+    status: 'completed',
+    payment: 'Paid',
+    ordered: 'In-house',
+    message: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellat harum molestiae perferendis fuga expedita repellendus',
   },
   {
-    id: 3,
+    id: 'c3t3c4873',
     name: "Jon Snow",
-    meal: "Burger, tacos, fruit",
-    table: 6,
+    meal: [
+      {
+        id: 2,
+        name: 'Fries',
+        quantity: 2,
+        imgUrl: 'https://images.pexels.com/photos/1893556/pexels-photo-1893556.jpeg?auto=compress&cs=tinysrgb&w=600',
+      },
+      {
+        id: 3,
+        name: 'Burger',
+        quantity: 2,
+        imgUrl: 'https://images.pexels.com/photos/1639557/pexels-photo-1639557.jpeg?auto=compress&cs=tinysrgb&w=600',
+      },
+      {
+        id: 4,
+        name: 'Sandwich',
+        quantity: 2,
+        imgUrl: 'https://images.pexels.com/photos/1603898/pexels-photo-1603898.jpeg?auto=compress&cs=tinysrgb&w=600',
+      },
+    ],
+    table: 'Take out',
     time: "15:22",
     price: "$132",
+    status: 'pending',
+    payment: 'Paid',
+    ordered: 'Online',
+    message: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellat harum molestiae perferendis fuga expedita repellendus',
   },
   {
-    id: 4,
+    id: 'tv8y783',
     name: "Jon Snow",
-    meal: "Juice, tacos, fruit",
+    meal: [
+      {
+        id: 1,
+        name: 'Pizza',
+        quantity: 2,
+        imgUrl: 'https://images.pexels.com/photos/2619970/pexels-photo-2619970.jpeg?auto=compress&cs=tinysrgb&w=600',
+      },
+      {
+        id: 3,
+        name: 'Burger',
+        quantity: 2,
+        imgUrl: 'https://images.pexels.com/photos/1639557/pexels-photo-1639557.jpeg?auto=compress&cs=tinysrgb&w=600',
+      },
+      {
+        id: 4,
+        name: 'Sandwich',
+        quantity: 2,
+        imgUrl: 'https://images.pexels.com/photos/1603898/pexels-photo-1603898.jpeg?auto=compress&cs=tinysrgb&w=600',
+      },
+    ],
     table: 11,
     time: "15:22",
     price: "$132",
+    status: 'completed',
+    payment: 'Not yet',
+    ordered: 'In-house',
+    message: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellat harum molestiae perferendis fuga expedita repellendus',
   },
   {
-    id: 5,
-    name: "Daenerys Targaryen",
-    meal: "Pizza, tacos, fruit",
-    table: 7,
+    id: 'c45b35c7',
+    name: "Daenerys",
+    meal: [
+      {
+        id: 1,
+        name: 'Pizza',
+        quantity: 2,
+        imgUrl: 'https://images.pexels.com/photos/2619970/pexels-photo-2619970.jpeg?auto=compress&cs=tinysrgb&w=600',
+      },
+      {
+        id: 2,
+        name: 'Fries',
+        quantity: 2,
+        imgUrl: 'https://images.pexels.com/photos/1893556/pexels-photo-1893556.jpeg?auto=compress&cs=tinysrgb&w=600',
+      },
+      {
+        id: 4,
+        name: 'Sandwich',
+        quantity: 2,
+        imgUrl: 'https://images.pexels.com/photos/1603898/pexels-photo-1603898.jpeg?auto=compress&cs=tinysrgb&w=600',
+      },
+    ],
+    table: 'Take out',
     time: "15:22",
     price: "$132",
+    status: 'pending',
+    payment: 'Paid',
+    ordered: 'Online',
+    message: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellat harum molestiae perferendis fuga expedita repellendus',
   },
   {
-    id: 6,
-    name: "Ever Melisandre",
-    meal: "Pizza, tacos, fruit",
+    id: 'c3b53c7d',
+    name: "Ever",
+    meal: [
+      {
+        id: 1,
+        name: 'Pizza',
+        quantity: 2,
+        imgUrl: 'https://images.pexels.com/photos/2619970/pexels-photo-2619970.jpeg?auto=compress&cs=tinysrgb&w=600',
+      },
+      {
+        id: 2,
+        name: 'Fries',
+        quantity: 2,
+        imgUrl: 'https://images.pexels.com/photos/1893556/pexels-photo-1893556.jpeg?auto=compress&cs=tinysrgb&w=600',
+      },
+      {
+        id: 3,
+        name: 'Burger',
+        quantity: 2,
+        imgUrl: 'https://images.pexels.com/photos/1639557/pexels-photo-1639557.jpeg?auto=compress&cs=tinysrgb&w=600',
+      },
+      {
+        id: 4,
+        name: 'Sandwich',
+        quantity: 2,
+        imgUrl: 'https://images.pexels.com/photos/1603898/pexels-photo-1603898.jpeg?auto=compress&cs=tinysrgb&w=600',
+      },
+    ],
     table: 4,
     time: "15:22",
     price: "$132",
+    status: 'pending',
+    payment: 'Paid',
+    ordered: 'In-house',
+    message: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellat harum molestiae perferendis fuga expedita repellendus',
   },
   {
-    id: 7,
-    name: "Ferrara Clifford",
-    meal: "Pizza, tacos, fruit",
-    table: 9,
+    id: '78c3b3t7',
+    name: " Clifford",
+    meal: [
+      {
+        id: 1,
+        name: 'Pizza',
+        quantity: 2,
+        imgUrl: 'https://images.pexels.com/photos/2619970/pexels-photo-2619970.jpeg?auto=compress&cs=tinysrgb&w=600',
+      },
+      {
+        id: 2,
+        name: 'Fries',
+        quantity: 2,
+        imgUrl: 'https://images.pexels.com/photos/1893556/pexels-photo-1893556.jpeg?auto=compress&cs=tinysrgb&w=600',
+      },
+      {
+        id: 3,
+        name: 'Burger',
+        quantity: 2,
+        imgUrl: 'https://images.pexels.com/photos/1639557/pexels-photo-1639557.jpeg?auto=compress&cs=tinysrgb&w=600',
+      },
+      {
+        id: 4,
+        name: 'Sandwich',
+        quantity: 2,
+        imgUrl: 'https://images.pexels.com/photos/1603898/pexels-photo-1603898.jpeg?auto=compress&cs=tinysrgb&w=600',
+      },
+    ],
+    table: 'Take out',
     time: "15:22",
     price: "$132",
+    status: 'completed',
+    payment: 'Paid',
+    ordered: 'Online',
+    message: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellat harum molestiae perferendis fuga expedita repellendus',
   },
   {
-    id: 8,
-    name: "Rossini Frances",
-    meal: "Pizza, tacos, fruit",
+    id: 'wtt78t78',
+    name: " Frances",
+    meal: [
+      {
+        id: 1,
+        name: 'Pizza',
+        quantity: 2,
+        imgUrl: 'https://images.pexels.com/photos/2619970/pexels-photo-2619970.jpeg?auto=compress&cs=tinysrgb&w=600',
+      },
+      {
+        id: 2,
+        name: 'Fries',
+        quantity: 2,
+        imgUrl: 'https://images.pexels.com/photos/1893556/pexels-photo-1893556.jpeg?auto=compress&cs=tinysrgb&w=600',
+      },
+      {
+        id: 3,
+        name: 'Burger',
+        quantity: 2,
+        imgUrl: 'https://images.pexels.com/photos/1639557/pexels-photo-1639557.jpeg?auto=compress&cs=tinysrgb&w=600',
+      },
+      {
+        id: 4,
+        name: 'Sandwich',
+        quantity: 2,
+        imgUrl: 'https://images.pexels.com/photos/1603898/pexels-photo-1603898.jpeg?auto=compress&cs=tinysrgb&w=600',
+      },
+    ],
     table: 13,
     time: "15:22",
     price: "$132",
+    status: 'pending',
+    payment: 'Paid',
+    ordered: 'In-house',
+    message: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellat harum molestiae perferendis fuga expedita repellendus',
   },
   {
-    id: 9,
-    name: "Harvey Roxie",
-    meal: "Pizza, tacos, fruit",
+    id: 'yt7vbyd',
+    name: " Roxie",
+    meal: [
+      {
+        id: 1,
+        name: 'Pizza',
+        quantity: 2,
+        imgUrl: 'https://images.pexels.com/photos/2619970/pexels-photo-2619970.jpeg?auto=compress&cs=tinysrgb&w=600',
+      },
+      {
+        id: 2,
+        name: 'Fries',
+        quantity: 2,
+        imgUrl: 'https://images.pexels.com/photos/1893556/pexels-photo-1893556.jpeg?auto=compress&cs=tinysrgb&w=600',
+      },
+      {
+        id: 3,
+        name: 'Burger',
+        quantity: 2,
+        imgUrl: 'https://images.pexels.com/photos/1639557/pexels-photo-1639557.jpeg?auto=compress&cs=tinysrgb&w=600',
+      },
+      {
+        id: 4,
+        name: 'Sandwich',
+        quantity: 2,
+        imgUrl: 'https://images.pexels.com/photos/1603898/pexels-photo-1603898.jpeg?auto=compress&cs=tinysrgb&w=600',
+      },
+    ],
     table: 12,
     time: "15:22",
     price: "$132",
+    status: 'completed',
+    payment: 'Not yet',
+    ordered: 'In-house',
+    message: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellat harum molestiae perferendis fuga expedita repellendus',
   },
   {
-    id: 10,
-    name: "Harvey Roxie",
-    meal: "Pizza, tacos, fruit",
-    table: 15,
+    id: '487c787',
+    name: "Harvey",
+    meal: [
+      {
+        id: 1,
+        name: 'Pizza',
+        quantity: 2,
+        imgUrl: 'https://images.pexels.com/photos/2619970/pexels-photo-2619970.jpeg?auto=compress&cs=tinysrgb&w=600',
+      },
+      {
+        id: 2,
+        name: 'Fries',
+        quantity: 2,
+        imgUrl: 'https://images.pexels.com/photos/1893556/pexels-photo-1893556.jpeg?auto=compress&cs=tinysrgb&w=600',
+      },
+      {
+        id: 3,
+        name: 'Burger',
+        quantity: 2,
+        imgUrl: 'https://images.pexels.com/photos/1639557/pexels-photo-1639557.jpeg?auto=compress&cs=tinysrgb&w=600',
+      },
+      {
+        id: 4,
+        name: 'Sandwich',
+        quantity: 2,
+        imgUrl: 'https://images.pexels.com/photos/1603898/pexels-photo-1603898.jpeg?auto=compress&cs=tinysrgb&w=600',
+      },
+    ],
+    table: 'Take out',
     time: "15:22",
     price: "$132",
+    status: 'completed',
+    payment: 'Paid',
+    ordered: 'Online',
+    message: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellat harum molestiae perferendis fuga expedita repellendus',
   },
   {
-    id: 11,
-    name: "Harvey Roxie",
-    meal: "Pizza, tacos, fruit",
+    id: 'ov82b787',
+    name: "Harvey ",
+    meal: [
+      {
+        id: 1,
+        name: 'Pizza',
+        quantity: 2,
+        imgUrl: 'https://images.pexels.com/photos/2619970/pexels-photo-2619970.jpeg?auto=compress&cs=tinysrgb&w=600',
+      },
+      {
+        id: 2,
+        name: 'Fries',
+        quantity: 2,
+        imgUrl: 'https://images.pexels.com/photos/1893556/pexels-photo-1893556.jpeg?auto=compress&cs=tinysrgb&w=600',
+      },
+      {
+        id: 3,
+        name: 'Burger',
+        quantity: 2,
+        imgUrl: 'https://images.pexels.com/photos/1639557/pexels-photo-1639557.jpeg?auto=compress&cs=tinysrgb&w=600',
+      },
+      {
+        id: 4,
+        name: 'Sandwich',
+        quantity: 2,
+        imgUrl: 'https://images.pexels.com/photos/1603898/pexels-photo-1603898.jpeg?auto=compress&cs=tinysrgb&w=600',
+      },
+    ],
     table: 17,
     time: "15:22",
     price: "$132",
+    status: 'pending',
+    payment: 'Paid',
+    ordered: 'In-house',
+    message: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellat harum molestiae perferendis fuga expedita repellendus',
   },
 ];
 
+export const mockDataPartnersMenus = [
+  {
+    id: '1',
+    meal: "Pizza",
+    time: "30min",
+    price: "$162",
+    imgUrl: 'https://images.pexels.com/photos/2619970/pexels-photo-2619970.jpeg?auto=compress&cs=tinysrgb&w=600',
+    restaurant: 'Kitchen Cafe',
+    logo: 'https://i.pinimg.com/236x/7c/41/cf/7c41cf02f5f829b9ea488ce207b5a1ef.jpg',
+  },
+  {
+    id: '2',
+    meal: "Fries",
+    time: "10min",
+    price: "$162",
+    imgUrl: 'https://images.pexels.com/photos/1893556/pexels-photo-1893556.jpeg?auto=compress&cs=tinysrgb&w=600',
+    restaurant: 'Restaurant',
+    logo: 'https://i.pinimg.com/236x/1e/76/e9/1e76e9ed4e3429557556dd890639def7.jpg',
+  },
+  {
+    id: '3',
+    meal: "Wedges",
+    time: "1h 10min",
+    price: "$162",
+    imgUrl: 'https://images.pexels.com/photos/7538053/pexels-photo-7538053.jpeg?auto=compress&cs=tinysrgb&w=600',
+    restaurant: `Burger King`,
+    logo: 'https://i.pinimg.com/236x/b0/02/d1/b002d1fd67ec16fd56c2682020bb0b79.jpg',
+  },
+  {
+    id: '4',
+    meal: "Roast",
+    time: "40min",
+    price: "$162",
+    imgUrl: 'https://images.pexels.com/photos/236887/pexels-photo-236887.jpeg?auto=compress&cs=tinysrgb&w=600',
+    restaurant: `King Soup`,
+    logo: 'https://i.pinimg.com/236x/a1/04/92/a104925efadaeaebdb093e4a573088c4.jpg',
+  },
+  {
+    id: '6',
+    meal: "Burger",
+    time: "15min",
+    price: "$162",
+    imgUrl: 'https://images.pexels.com/photos/1639557/pexels-photo-1639557.jpeg?auto=compress&cs=tinysrgb&w=600',
+    restaurant: 'Kitchen Cafe',
+    logo: 'https://i.pinimg.com/236x/7c/41/cf/7c41cf02f5f829b9ea488ce207b5a1ef.jpg',
+  },
+  {
+    id: '7',
+    meal: "pickle",
+    time: "15min",
+    price: "$162",
+    imgUrl: 'https://images.pexels.com/photos/12634143/pexels-photo-12634143.jpeg?auto=compress&cs=tinysrgb&w=600',
+    restaurant: `Burger King`,
+    logo: 'https://i.pinimg.com/236x/b0/02/d1/b002d1fd67ec16fd56c2682020bb0b79.jpg',
+  },
+  {
+    id: '8',
+    meal: "sandwich",
+    time: "15min",
+    price: "$162",
+    imgUrl: 'https://images.pexels.com/photos/1603898/pexels-photo-1603898.jpeg?auto=compress&cs=tinysrgb&w=600',
+    restaurant: 'Kitchen Cafe',
+    logo: 'https://i.pinimg.com/236x/7c/41/cf/7c41cf02f5f829b9ea488ce207b5a1ef.jpg',
+  },
+  {
+    id: '9',
+    meal: "Beef",
+    time: "15min",
+    price: "$162",
+    imgUrl: 'https://images.pexels.com/photos/2313686/pexels-photo-2313686.jpeg?auto=compress&cs=tinysrgb&w=600',
+    restaurant: `King Soup`,
+    logo: 'https://i.pinimg.com/236x/a1/04/92/a104925efadaeaebdb093e4a573088c4.jpg',
+  },
+  {
+    id: '10',
+    meal: "Juice",
+    time: "15min",
+    price: "$162",
+    imgUrl: 'https://images.pexels.com/photos/1251210/pexels-photo-1251210.jpeg?auto=compress&cs=tinysrgb&w=600',
+    restaurant: `King Soup`,
+    logo: 'https://i.pinimg.com/236x/a1/04/92/a104925efadaeaebdb093e4a573088c4.jpg',
+  },
+];
 export const mockDataMenus = [
   {
     id: '1',
@@ -270,86 +648,6 @@ export const mockTransactions = [
     user: "jackdower",
     date: "2022-04-01",
     cost: "133.45",
-  },
-];
-
-export const mockBarData = [
-  {
-    country: "AD",
-    "hot dog": 137,
-    "hot dogColor": "hsl(229, 70%, 50%)",
-    burger: 96,
-    burgerColor: "hsl(296, 70%, 50%)",
-    kebab: 72,
-    kebabColor: "hsl(97, 70%, 50%)",
-    donut: 140,
-    donutColor: "hsl(340, 70%, 50%)",
-  },
-  {
-    country: "AE",
-    "hot dog": 55,
-    "hot dogColor": "hsl(307, 70%, 50%)",
-    burger: 28,
-    burgerColor: "hsl(111, 70%, 50%)",
-    kebab: 58,
-    kebabColor: "hsl(273, 70%, 50%)",
-    donut: 29,
-    donutColor: "hsl(275, 70%, 50%)",
-  },
-  {
-    country: "AF",
-    "hot dog": 109,
-    "hot dogColor": "hsl(72, 70%, 50%)",
-    burger: 23,
-    burgerColor: "hsl(96, 70%, 50%)",
-    kebab: 34,
-    kebabColor: "hsl(106, 70%, 50%)",
-    donut: 152,
-    donutColor: "hsl(256, 70%, 50%)",
-  },
-  {
-    country: "AG",
-    "hot dog": 133,
-    "hot dogColor": "hsl(257, 70%, 50%)",
-    burger: 52,
-    burgerColor: "hsl(326, 70%, 50%)",
-    kebab: 43,
-    kebabColor: "hsl(110, 70%, 50%)",
-    donut: 83,
-    donutColor: "hsl(9, 70%, 50%)",
-  },
-  {
-    country: "AI",
-    "hot dog": 81,
-    "hot dogColor": "hsl(190, 70%, 50%)",
-    burger: 80,
-    burgerColor: "hsl(325, 70%, 50%)",
-    kebab: 112,
-    kebabColor: "hsl(54, 70%, 50%)",
-    donut: 35,
-    donutColor: "hsl(285, 70%, 50%)",
-  },
-  {
-    country: "AL",
-    "hot dog": 66,
-    "hot dogColor": "hsl(208, 70%, 50%)",
-    burger: 111,
-    burgerColor: "hsl(334, 70%, 50%)",
-    kebab: 167,
-    kebabColor: "hsl(182, 70%, 50%)",
-    donut: 18,
-    donutColor: "hsl(76, 70%, 50%)",
-  },
-  {
-    country: "AM",
-    "hot dog": 80,
-    "hot dogColor": "hsl(87, 70%, 50%)",
-    burger: 47,
-    burgerColor: "hsl(141, 70%, 50%)",
-    kebab: 158,
-    kebabColor: "hsl(224, 70%, 50%)",
-    donut: 49,
-    donutColor: "hsl(274, 70%, 50%)",
   },
 ];
 
@@ -548,689 +846,150 @@ export const mockLineData = [
   },
 ];
 
-export const mockGeographyData = [
-  {
-    id: "AFG",
-    price: 520600,
-  },
-  {
-    id: "AGO",
-    price: 949905,
-  },
-  {
-    id: "ALB",
-    price: 329910,
-  },
-  {
-    id: "ARE",
-    price: 675484,
-  },
-  {
-    id: "ARG",
-    price: 432239,
-  },
-  {
-    id: "ARM",
-    price: 288305,
-  },
-  {
-    id: "ATA",
-    price: 415648,
-  },
-  {
-    id: "ATF",
-    price: 665159,
-  },
-  {
-    id: "AUT",
-    price: 798526,
-  },
-  {
-    id: "AZE",
-    price: 481678,
-  },
-  {
-    id: "BDI",
-    price: 496457,
-  },
-  {
-    id: "BEL",
-    price: 252276,
-  },
-  {
-    id: "BEN",
-    price: 440315,
-  },
-  {
-    id: "BFA",
-    price: 343752,
-  },
-  {
-    id: "BGD",
-    price: 920203,
-  },
-  {
-    id: "BGR",
-    price: 261196,
-  },
-  {
-    id: "BHS",
-    price: 421551,
-  },
-  {
-    id: "BIH",
-    price: 974745,
-  },
-  {
-    id: "BLR",
-    price: 349288,
-  },
-  {
-    id: "BLZ",
-    price: 305983,
-  },
-  {
-    id: "BOL",
-    price: 430840,
-  },
-  {
-    id: "BRN",
-    price: 345666,
-  },
-  {
-    id: "BTN",
-    price: 649678,
-  },
-  {
-    id: "BWA",
-    price: 319392,
-  },
-  {
-    id: "CAF",
-    price: 722549,
-  },
-  {
-    id: "CAN",
-    price: 332843,
-  },
-  {
-    id: "CHE",
-    price: 122159,
-  },
-  {
-    id: "CHL",
-    price: 811736,
-  },
-  {
-    id: "CHN",
-    price: 593604,
-  },
-  {
-    id: "CIV",
-    price: 143219,
-  },
-  {
-    id: "CMR",
-    price: 630627,
-  },
-  {
-    id: "COG",
-    price: 498556,
-  },
-  {
-    id: "COL",
-    price: 660527,
-  },
-  {
-    id: "CRI",
-    price: 60262,
-  },
-  {
-    id: "CUB",
-    price: 177870,
-  },
-  {
-    id: "-99",
-    price: 463208,
-  },
-  {
-    id: "CYP",
-    price: 945909,
-  },
-  {
-    id: "CZE",
-    price: 500109,
-  },
-  {
-    id: "DEU",
-    price: 63345,
-  },
-  {
-    id: "DJI",
-    price: 634523,
-  },
-  {
-    id: "DNK",
-    price: 731068,
-  },
-  {
-    id: "DOM",
-    price: 262538,
-  },
-  {
-    id: "DZA",
-    price: 760695,
-  },
-  {
-    id: "ECU",
-    price: 301263,
-  },
-  {
-    id: "EGY",
-    price: 148475,
-  },
-  {
-    id: "ERI",
-    price: 939504,
-  },
-  {
-    id: "ESP",
-    price: 706050,
-  },
-  {
-    id: "EST",
-    price: 977015,
-  },
-  {
-    id: "ETH",
-    price: 461734,
-  },
-  {
-    id: "FIN",
-    price: 22800,
-  },
-  {
-    id: "FJI",
-    price: 18985,
-  },
-  {
-    id: "FLK",
-    price: 64986,
-  },
-  {
-    id: "FRA",
-    price: 447457,
-  },
-  {
-    id: "GAB",
-    price: 669675,
-  },
-  {
-    id: "GBR",
-    price: 757120,
-  },
-  {
-    id: "GEO",
-    price: 158702,
-  },
-  {
-    id: "GHA",
-    price: 893180,
-  },
-  {
-    id: "GIN",
-    price: 877288,
-  },
-  {
-    id: "GMB",
-    price: 724530,
-  },
-  {
-    id: "GNB",
-    price: 387753,
-  },
-  {
-    id: "GNQ",
-    price: 706118,
-  },
-  {
-    id: "GRC",
-    price: 377796,
-  },
-  {
-    id: "GTM",
-    price: 66890,
-  },
-  {
-    id: "GUY",
-    price: 719300,
-  },
-  {
-    id: "HND",
-    price: 739590,
-  },
-  {
-    id: "HRV",
-    price: 929467,
-  },
-  {
-    id: "HTI",
-    price: 538961,
-  },
-  {
-    id: "HUN",
-    price: 146095,
-  },
-  {
-    id: "IDN",
-    price: 490681,
-  },
-  {
-    id: "IND",
-    price: 549818,
-  },
-  {
-    id: "IRL",
-    price: 630163,
-  },
-  {
-    id: "IRN",
-    price: 596921,
-  },
-  {
-    id: "IRQ",
-    price: 767023,
-  },
-  {
-    id: "ISL",
-    price: 478682,
-  },
-  {
-    id: "ISR",
-    price: 963688,
-  },
-  {
-    id: "ITA",
-    price: 393089,
-  },
-  {
-    id: "JAM",
-    price: 83173,
-  },
-  {
-    id: "JOR",
-    price: 52005,
-  },
-  {
-    id: "JPN",
-    price: 199174,
-  },
-  {
-    id: "KAZ",
-    price: 181424,
-  },
-  {
-    id: "KEN",
-    price: 60946,
-  },
-  {
-    id: "KGZ",
-    price: 432478,
-  },
-  {
-    id: "KHM",
-    price: 254461,
-  },
-  {
-    id: "OSA",
-    price: 942447,
-  },
-  {
-    id: "KWT",
-    price: 414413,
-  },
-  {
-    id: "LAO",
-    price: 448339,
-  },
-  {
-    id: "LBN",
-    price: 620090,
-  },
-  {
-    id: "LBR",
-    price: 435950,
-  },
-  {
-    id: "LBY",
-    price: 75091,
-  },
-  {
-    id: "LKA",
-    price: 595124,
-  },
-  {
-    id: "LSO",
-    price: 483524,
-  },
-  {
-    id: "LTU",
-    price: 867357,
-  },
-  {
-    id: "LUX",
-    price: 689172,
-  },
-  {
-    id: "LVA",
-    price: 742980,
-  },
-  {
-    id: "MAR",
-    price: 236538,
-  },
-  {
-    id: "MDA",
-    price: 926836,
-  },
-  {
-    id: "MDG",
-    price: 840840,
-  },
-  {
-    id: "MEX",
-    price: 353910,
-  },
-  {
-    id: "MKD",
-    price: 505842,
-  },
-  {
-    id: "MLI",
-    price: 286082,
-  },
-  {
-    id: "MMR",
-    price: 915544,
-  },
-  {
-    id: "MNE",
-    price: 609500,
-  },
-  {
-    id: "MNG",
-    price: 410428,
-  },
-  {
-    id: "MOZ",
-    price: 32868,
-  },
-  {
-    id: "MRT",
-    price: 375671,
-  },
-  {
-    id: "MWI",
-    price: 591935,
-  },
-  {
-    id: "MYS",
-    price: 991644,
-  },
-  {
-    id: "NAM",
-    price: 701897,
-  },
-  {
-    id: "NCL",
-    price: 144098,
-  },
-  {
-    id: "NER",
-    price: 312944,
-  },
-  {
-    id: "NGA",
-    price: 862877,
-  },
-  {
-    id: "NIC",
-    price: 90831,
-  },
-  {
-    id: "NLD",
-    price: 281879,
-  },
-  {
-    id: "NOR",
-    price: 224537,
-  },
-  {
-    id: "NPL",
-    price: 322331,
-  },
-  {
-    id: "NZL",
-    price: 86615,
-  },
-  {
-    id: "OMN",
-    price: 707881,
-  },
-  {
-    id: "PAK",
-    price: 158577,
-  },
-  {
-    id: "PAN",
-    price: 738579,
-  },
-  {
-    id: "PER",
-    price: 248751,
-  },
-  {
-    id: "PHL",
-    price: 557292,
-  },
-  {
-    id: "PNG",
-    price: 516874,
-  },
-  {
-    id: "POL",
-    price: 682137,
-  },
-  {
-    id: "PRI",
-    price: 957399,
-  },
-  {
-    id: "PRT",
-    price: 846430,
-  },
-  {
-    id: "PRY",
-    price: 720555,
-  },
-  {
-    id: "QAT",
-    price: 478726,
-  },
-  {
-    id: "ROU",
-    price: 259318,
-  },
-  {
-    id: "RUS",
-    price: 268735,
-  },
-  {
-    id: "RWA",
-    price: 136781,
-  },
-  {
-    id: "ESH",
-    price: 151957,
-  },
-  {
-    id: "SAU",
-    price: 111821,
-  },
-  {
-    id: "SDN",
-    price: 927112,
-  },
-  {
-    id: "SDS",
-    price: 966473,
-  },
-  {
-    id: "SEN",
-    price: 158085,
-  },
-  {
-    id: "SLB",
-    price: 178389,
-  },
-  {
-    id: "SLE",
-    price: 528433,
-  },
-  {
-    id: "SLV",
-    price: 353467,
-  },
-  {
-    id: "ABV",
-    price: 251,
-  },
-  {
-    id: "SOM",
-    price: 445243,
-  },
-  {
-    id: "SRB",
-    price: 202402,
-  },
-  {
-    id: "SUR",
-    price: 972121,
-  },
-  {
-    id: "SVK",
-    price: 319923,
-  },
-  {
-    id: "SVN",
-    price: 728766,
-  },
-  {
-    id: "SWZ",
-    price: 379669,
-  },
-  {
-    id: "SYR",
-    price: 16221,
-  },
-  {
-    id: "TCD",
-    price: 101273,
-  },
-  {
-    id: "TGO",
-    price: 498411,
-  },
-  {
-    id: "THA",
-    price: 506906,
-  },
-  {
-    id: "TJK",
-    price: 613093,
-  },
-  {
-    id: "TKM",
-    price: 327016,
-  },
-  {
-    id: "TLS",
-    price: 607972,
-  },
-  {
-    id: "TTO",
-    price: 936365,
-  },
-  {
-    id: "TUN",
-    price: 898416,
-  },
-  {
-    id: "TUR",
-    price: 237783,
-  },
-  {
-    id: "TWN",
-    price: 878213,
-  },
-  {
-    id: "TZA",
-    price: 442174,
-  },
-  {
-    id: "UGA",
-    price: 720710,
-  },
-  {
-    id: "UKR",
-    price: 74172,
-  },
-  {
-    id: "URY",
-    price: 753177,
-  },
-  {
-    id: "USA",
-    price: 658725,
-  },
-  {
-    id: "UZB",
-    price: 550313,
-  },
-  {
-    id: "VEN",
-    price: 707492,
-  },
-  {
-    id: "VNM",
-    price: 538907,
-  },
-  {
-    id: "VUT",
-    price: 650646,
-  },
-  {
-    id: "PSE",
-    price: 476078,
-  },
-  {
-    id: "YEM",
-    price: 957751,
-  },
-  {
-    id: "ZAF",
-    price: 836949,
-  },
-  {
-    id: "ZMB",
-    price: 714503,
-  },
-  {
-    id: "ZWE",
-    price: 405217,
-  },
-  {
-    id: "KOR",
-    price: 171135,
+export const staffInfo =[
+  {
+    id: 1,
+    name: "John Doe",
+    email: 'johndow@mail.com',
+    role: 'Chef',
+    access: 'Order, Menu',
+    imgUrl: 'https://i.pinimg.com/236x/75/1d/f9/751df96aef88b0969ab37c1c094eed43.jpg',
+  },
+  {
+    id: 2,
+    name: "Moon Bloom",
+    email: 'moon@mail.com',
+    role: 'Waiter',
+    access: 'None',
+    imgUrl: 'https://i.pinimg.com/236x/78/2c/8c/782c8c59b33d130efc8759d80687c677.jpg',
+  },
+  {
+    id: 2,
+    name: "Moon Bloom",
+    email: 'moon@mail.com',
+    role: 'Waiter',
+    access: 'None',
+    imgUrl: 'https://i.pinimg.com/236x/78/2c/8c/782c8c59b33d130efc8759d80687c677.jpg',
+  },
+  {
+    id: 2,
+    name: "Moon Bloom",
+    email: 'moon@mail.com',
+    role: 'Waiter',
+    access: 'None',
+    imgUrl: 'https://i.pinimg.com/236x/78/2c/8c/782c8c59b33d130efc8759d80687c677.jpg',
+  },
+  {
+    id: 2,
+    name: "Moon Bloom",
+    email: 'moon@mail.com',
+    role: 'Waiter',
+    access: 'None',
+    imgUrl: 'https://i.pinimg.com/236x/78/2c/8c/782c8c59b33d130efc8759d80687c677.jpg',
+  },
+  {
+    id: 2,
+    name: "Moon Bloom",
+    email: 'moon@mail.com',
+    role: 'Waiter',
+    access: 'None',
+    imgUrl: 'https://i.pinimg.com/236x/78/2c/8c/782c8c59b33d130efc8759d80687c677.jpg',
+  },
+  {
+    id: 2,
+    name: "Moon Bloom",
+    email: 'moon@mail.com',
+    role: 'Waiter',
+    access: 'None',
+    imgUrl: 'https://i.pinimg.com/236x/78/2c/8c/782c8c59b33d130efc8759d80687c677.jpg',
   },
 ];
+
+export const staffRole = [
+  {label: 'Head Chef'},
+  {label: 'Chef'},
+  {label: 'Junior Chef'},
+  {label: 'Cashier'},
+  {label: 'Waiter'},
+  {label: 'Deliver Boy'},
+  {label: 'Garbage Boy'},
+  {label: 'Staff'},
+];
+
+export const staffAccess = [
+  {label: 'Full Access'},
+  {label: 'Order, Menu'},
+  {label: 'Order, Menu, Settings'},
+  {label: 'Payment'},
+  {label: 'None'},
+];
+
+export const partners = [
+  {
+    id: 2,
+    name: 'Kitchen Cafe',
+    imgUrl: 'https://i.pinimg.com/236x/7c/41/cf/7c41cf02f5f829b9ea488ce207b5a1ef.jpg',
+  },
+  {
+    id: 4,
+    name: 'Restaurant',
+    imgUrl: 'https://i.pinimg.com/236x/1e/76/e9/1e76e9ed4e3429557556dd890639def7.jpg',
+  },
+  {
+    id: 8,
+    name: `Burger King`,
+    imgUrl: 'https://i.pinimg.com/236x/b0/02/d1/b002d1fd67ec16fd56c2682020bb0b79.jpg',
+  },
+  {
+    id: 9,
+    name: `King Soup`,
+    imgUrl: 'https://i.pinimg.com/236x/a1/04/92/a104925efadaeaebdb093e4a573088c4.jpg',
+  },
+]
+export const restaurants = [
+  {
+    id: 1,
+    name: 'KFC',
+    imgUrl: 'https://i.pinimg.com/236x/1c/de/88/1cde883c2f49f14db49354fd668d58a3.jpg',
+  },
+  {
+    id: 2,
+    name: 'Kitchen Cafe',
+    imgUrl: 'https://i.pinimg.com/236x/7c/41/cf/7c41cf02f5f829b9ea488ce207b5a1ef.jpg',
+  },
+  {
+    id: 3,
+    name: 'Chef Restaurant',
+    imgUrl: 'https://i.pinimg.com/236x/27/dc/03/27dc0327b79fc04ac6827c3f0842e9ca.jpg',
+  },
+  {
+    id: 4,
+    name: 'Restaurant',
+    imgUrl: 'https://i.pinimg.com/236x/1e/76/e9/1e76e9ed4e3429557556dd890639def7.jpg',
+  },
+  {
+    id: 5,
+    name: 'Hello Dine',
+    imgUrl: 'https://i.pinimg.com/236x/8b/1c/57/8b1c57d123815a39314feee67404d415.jpg',
+  },
+  {
+    id: 6,
+    name: `Tonight's Plan`,
+    imgUrl: 'https://i.pinimg.com/236x/75/81/78/7581788ce163a0674fc4765108ca8e9f.jpg',
+  },
+  {
+    id: 7,
+    name: 'Chef on Menu',
+    imgUrl: 'https://i.pinimg.com/236x/42/b6/4a/42b64afa11b820a05ba0aaea81d48c3b.jpg',
+  },
+  {
+    id: 8,
+    name: `Burger King`,
+    imgUrl: 'https://i.pinimg.com/236x/b0/02/d1/b002d1fd67ec16fd56c2682020bb0b79.jpg',
+  },
+  {
+    id: 9,
+    name: `King Soup`,
+    imgUrl: 'https://i.pinimg.com/236x/a1/04/92/a104925efadaeaebdb093e4a573088c4.jpg',
+  },
+]

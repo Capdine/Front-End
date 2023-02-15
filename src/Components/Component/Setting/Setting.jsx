@@ -1,10 +1,11 @@
-import React from 'react';
-import './Settings.scss';
+import React, { useState } from 'react';
+import './Setting.scss';
 import { RiUpload2Fill } from 'react-icons/ri';
-import { Paper, TextField } from '@mui/material';
-import LinearProgress from '@mui/material/LinearProgress';
+import { MdRestaurantMenu } from 'react-icons/md';
+import { Autocomplete, Paper, TextField } from '@mui/material';
 import { Formik } from 'formik';
 import * as yup from "yup";
+import { staffAccess, staffInfo, staffRole } from '../../Data/mockData';
 
 const initialValues = {
     name: '',
@@ -14,6 +15,7 @@ const initialValues = {
 }
 const initialValues2 = {
     email: '',
+    staffname: '',
     position: '',
     access: ''
 }
@@ -28,11 +30,13 @@ const restaurantSchema = yup.object().shape({
 })
 const staffSchema = yup.object().shape({
     email: yup.string().required("Email is required"),
+    staffname: yup.string().required("Name is required"),
     position: yup.string().required("Position is required"),
     access: yup.string().required("Access type is required")
 })
 
-const Settings = () => {
+const Setting = () => {
+    const [file, setFile] = useState(null);
 
     const handleSubmit = () => {
         console.log(value)
@@ -45,11 +49,10 @@ const Settings = () => {
             <div className="content">
                 <Paper elevation={3} className="left">
                     <div className="img-upload">
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTDMsIQjVDI_yrFB4vUjX15TdFRan7SOUFyEg&usqp=CAU" alt="" />
-
-                        <input type="file" name="file" id="file" />
+                        {file ? <img src={URL.createObjectURL(file)} alt="" /> : <div><div className='logo-pic'><MdRestaurantMenu /></div></div>}
+                        <input type="file" name="file" id="file"  onChange={(e) => setFile(e.target.files[0])} />
                         <label htmlFor='file' className='upload brand-btn' >Resaurant Logo<RiUpload2Fill /></label>
-                        <LinearProgress value={50} />
+
                     </div>
                 </Paper>
                 <div className="right">
@@ -125,7 +128,7 @@ const Settings = () => {
                                             />
                                         </div>
                                     </div>
-                                    <button className='brand-btn'>Save</button>
+                                    <button className='brand-btn save-btn'>Save</button>
                                 </Paper>
                             </form>
                         )}
@@ -163,41 +166,87 @@ const Settings = () => {
                                     </div>
                                     <div className="row">
                                         <div className="item">
-                                            <span>Role</span>
+                                            <span>Staff Photo</span>
+                                            <input type="file" name="file" id="staffPhoto" />
+                                            <label htmlFor='file' className='upload brand-btn' >Upload<RiUpload2Fill /></label>
+                                        </div>
+                                        <div className="item"
+                                        >
+                                            <span>Staff Name</span>
                                             <TextField
                                                 type="text"
-                                                placeholder='Position'
-                                                name='position'
-                                                value={values.position}
+                                                placeholder='Name'
+                                                name='staffname'
+                                                value={values.staffname}
                                                 onBlur={handleBlur}
                                                 onChange={handleChange}
-                                                error={!!touched.position && !!errors.position}
-                                                helperText={touched.position && errors.position}
+                                                error={!!touched.staffname && !!errors.staffname}
+                                                helperText={touched.staffname && errors.staffname}
+                                            />
+                                        </div>
+                                    </div>
+                                    <div className="row">
+                                        <div className="item">
+                                            <span>Role</span>
+                                            <Autocomplete
+                                                options={staffRole}
+                                                renderInput={(params) =>
+                                                    <TextField
+                                                        {...params}
+                                                        placeholder='Position'
+                                                        name='position'
+                                                        value={values.position}
+                                                        onBlur={handleBlur}
+                                                        onChange={handleChange}
+                                                        error={!!touched.position && !!errors.position}
+                                                        helperText={touched.position && errors.position}
+                                                    />}
                                             />
                                         </div>
                                         <div className="item">
                                             <span>Access</span>
-                                            <TextField
-                                                type="text"
-                                                placeholder='Orders. Menus, Settings..'
-                                                name='access'
-                                                value={values.access}
-                                                onBlur={handleBlur}
-                                                onChange={handleChange}
-                                                error={!!touched.access && !!errors.access}
-                                                helperText={touched.access && errors.access}
+                                            <Autocomplete
+                                                options={staffAccess}
+                                                renderInput={(params) =>
+                                                    <TextField
+                                                        {...params}
+                                                        placeholder='Orders. Menus, Settings..'
+                                                        name='access'
+                                                        value={values.access}
+                                                        onBlur={handleBlur}
+                                                        onChange={handleChange}
+                                                        error={!!touched.access && !!errors.access}
+                                                        helperText={touched.access && errors.access}
+                                                    />}
                                             />
                                         </div>
                                     </div>
-                                    <button className='brand-btn'>Save</button>
+                                    <button className='brand-btn save-btn'>Save</button>
                                 </Paper>
                             </form>
                         )}
                     </Formik>
                 </div>
             </div>
+            <div className="staff-content">
+                <h3>Staff Members</h3>
+                <div className="staff">
+                    {
+                        staffInfo.map((staff) => (
+                            <Paper elevation={3} className="item">
+                                <div className="user">
+                                    <img src={staff.imgUrl} alt="" />
+                                    <h5>{staff.name}</h5>
+                                    <span>{staff.role}</span>
+                                    <h6>{staff.email}</h6>
+                                </div>
+                            </Paper>
+                        ))
+                    }
+                </div>
+            </div>
         </section >
     );
 };
 
-export default Settings;
+export default Setting;

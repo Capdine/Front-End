@@ -6,7 +6,7 @@
     z-index: 99999;
 
     @include mobile {
-        width: 80%;
+        width: 80% !important;
         min-height: 35%;
     }
     @include tablet {
