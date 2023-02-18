@@ -5,7 +5,6 @@ import { FaTasks } from 'react-icons/fa';
 import { Paper } from '@mui/material';
 import LineChart from '../../Component/LineChart/LineChart';
 import PieChart from '../../Component/PieChart/PieChart';
-import Todo from '../../Component/Todo/Todo';
 import RecentTransaction from '../../Component/RecentTransaction/RecentTransaction';
 import Status from '../../Component/Status/Status';
 import CurrentOrders from '../../Component/CurrentOrders/CurrentOrders';
@@ -52,12 +51,6 @@ const Dashboard = () => {
                         <PieChart isDashboard={true} />
                     </div>
                 </Paper>
-            </div>
-            <div className="row1">
-
-                <Todo />
-                {/* <RecentTransaction /> */}
-
             </div>
         </section>
     );

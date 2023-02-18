@@ -985,6 +985,7 @@ export const partners = [
     imgUrl: 'https://i.pinimg.com/236x/a1/04/92/a104925efadaeaebdb093e4a573088c4.jpg',
   },
 ]
+
 export const restaurants = [
   {
     id: 1,
@@ -1030,5 +1031,53 @@ export const restaurants = [
     id: 9,
     name: `King Soup`,
     imgUrl: 'https://i.pinimg.com/236x/a1/04/92/a104925efadaeaebdb093e4a573088c4.jpg',
+  },
+]
+
+export const pricePlan = [
+  {
+    id: 1,
+    title: 'Basic',
+    subtitle: 'Ideal solution for beginners',
+    perMonth: 3,
+    perDay: 0.1,
+    features: [
+      {detail: 'Ipsum dolor sit.'},
+      {detail: 'dolor sit amet.'},
+      {detail: 'consectetur adipisicing elit.'},
+      {detail: 'Sit amet elit.'},
+    ],
+
+  },
+  {
+    id: 2,
+    title: 'Popular',
+    subtitle: 'Perfect package to be an Entrepreneur',
+    perMonth: 6,
+    perDay: 0.2,
+    features: [
+      {detail: 'Loremamet con elit.'},
+      {detail: 'tetur adipisicing elit.'},
+      {detail: 'Luw amet consectet.'},
+      {detail: 'Lorem iet consectetur adipisi'},
+      {detail: 'Lorem ipsumlit adipisicing.'},
+    ],
+
+  },
+  {
+    id: 3,
+    title: 'Premium',
+    subtitle: 'Optimized for medium and large businesses',
+    perMonth: 80,
+    perDay: 2.6,
+    features: [
+      {detail: 'Lorem ipsum don elit.'},
+      {detail: 'Lorem ipsum doctetur adipisicing elit.'},
+      {detail: 'ipsum dolor silit.'},
+      {detail: 'Lorem ipsum dolopisicing.'},
+      {detail: 'ipsum doloring elit.'},
+      {detail: 'Luw amet consecteturt.'},
+    ],
+
   },
 ]

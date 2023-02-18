@@ -178,12 +178,7 @@
                             width: 100%;
                             padding: 10px;
                             font-size: 16px;
-                            font-weight: 600;
-
-                            @include mobile {
-                                font-weight: 500;
-                            }
-
+                            
                             &::placeholder {
                                 color: #000000;
                                 font-weight: 500;

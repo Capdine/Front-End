@@ -8,6 +8,7 @@ import Login from './Login/Login';
 import Menus from './Menus/Menus';
 import Orders from './Orders/Orders';
 import Page404 from './Page404/Page404';
+import Payment from './Payment/Payment';
 import Pie from './Pie/Pie';
 import Register from './Register/Register';
 import SettingsPage from './SettingsPage/SettingsPage';
@@ -25,6 +26,7 @@ const MainPage = () => {
                         <Route path='/settings' element={<SettingsPage />}></Route>
                         <Route path='/pieGraph' element={<Pie />}></Route>
                         <Route path='/lineGraph' element={<LineGraph />}></Route>
+                        <Route path='/payment' element={<Payment />}></Route>
                         <Route path='/FAQ' element={<FAQ />}></Route>
                         <Route path='*' element={<Page404 />}></Route>
                     </Route>
